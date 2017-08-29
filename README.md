@@ -1,4 +1,4 @@
-# GMPhotos
+# GMPhotos 2017
 This repo is for a simple photo app used for an iOS Mobile Development intro class. 
 
 Class content is divided into different parts, and each part has its own branch, building on previous work.
