@@ -239,5 +239,13 @@
             </objects>
             <point key="canvasLocation" x="-478" y="29"/>
         </scene>
+        <!--Photo Pager View Controller-->
+        <scene sceneID="vw7-FM-qHb">
+            <objects>
+                <pageViewController storyboardIdentifier="PhotoPagerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fY7-5D-eWf" customClass="PhotoPagerViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UoF-YX-2iE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="29"/>
+        </scene>
     </scenes>
 </document>

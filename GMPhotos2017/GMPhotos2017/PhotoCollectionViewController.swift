@@ -106,13 +106,10 @@ class PhotoCollectionViewController : UICollectionViewController
 
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let photo = resultsController.object(at: indexPath) as? Photo else {
+        guard let photos = resultsController.fetchedObjects as? [Photo] else {
             return
         }
-
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let controller = storyboard.instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
-        controller.photo = photo
+        let controller = PhotoPagerViewController.controller(photos, startingIndex: indexPath.row)
         navigationController?.pushViewController(controller, animated: true)
     }
 

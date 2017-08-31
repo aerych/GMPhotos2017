@@ -15,6 +15,7 @@
 		E607A7AA1F56031500263B7B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A7A91F56031500263B7B /* PhotoCell.swift */; };
 		E607A7AC1F56033000263B7B /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A7AB1F56033000263B7B /* PhotoViewController.swift */; };
 		E607A7AE1F56034000263B7B /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E607A7AD1F56034000263B7B /* PhotoCollectionViewController.swift */; };
+		E6649D6D1F58B8D90048E33E /* PhotoPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6649D6C1F58B8D90048E33E /* PhotoPagerViewController.swift */; };
 		E666C5C11F58996D00A12088 /* whistler.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E607A7A81F56028300263B7B /* whistler.jpg */; };
 		E6A9A3691F588EAF0008D21D /* SavePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9A3681F588EAF0008D21D /* SavePhotoViewController.swift */; };
 		E6A9A36B1F588ED50008D21D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9A36A1F588ED50008D21D /* Photo.swift */; };
@@ -35,6 +36,7 @@
 		E607A7A91F56031500263B7B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		E607A7AB1F56033000263B7B /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		E607A7AD1F56034000263B7B /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		E6649D6C1F58B8D90048E33E /* PhotoPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPagerViewController.swift; sourceTree = "<group>"; };
 		E6A9A3681F588EAF0008D21D /* SavePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoViewController.swift; sourceTree = "<group>"; };
 		E6A9A36A1F588ED50008D21D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E6A9A36C1F588EF30008D21D /* PhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHelper.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				E607A7A81F56028300263B7B /* whistler.jpg */,
 				E607A7921F55FAF100263B7B /* AppDelegate.swift */,
 				E607A7AD1F56034000263B7B /* PhotoCollectionViewController.swift */,
+				E6649D6C1F58B8D90048E33E /* PhotoPagerViewController.swift */,
 				E607A7AB1F56033000263B7B /* PhotoViewController.swift */,
 				E6F2B0BE1F58AE0B006C1C2F /* MapViewController.swift */,
 				E6A9A3681F588EAF0008D21D /* SavePhotoViewController.swift */,
@@ -170,6 +173,7 @@
 				E6F2B0BF1F58AE0B006C1C2F /* MapViewController.swift in Sources */,
 				E607A7931F55FAF100263B7B /* AppDelegate.swift in Sources */,
 				E607A79B1F55FAF100263B7B /* GMPhotos2017.xcdatamodeld in Sources */,
+				E6649D6D1F58B8D90048E33E /* PhotoPagerViewController.swift in Sources */,
 				E6A9A36D1F588EF30008D21D /* PhotoHelper.swift in Sources */,
 				E607A7AC1F56033000263B7B /* PhotoViewController.swift in Sources */,
 			);
