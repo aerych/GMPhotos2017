@@ -82,38 +82,69 @@
             </objects>
             <point key="canvasLocation" x="-1311" y="-739"/>
         </scene>
-        <!--Photo View Controller-->
+        <!--Photo-->
         <scene sceneID="MWX-Os-rt4">
             <objects>
                 <viewController storyboardIdentifier="PhotoViewController" id="FgH-kb-1J7" customClass="PhotoViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43W-MN-dU0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ng1-jt-HOu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="8" y="72" width="359" height="543"/>
                             </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22h-3e-Tyt">
+                                <rect key="frame" x="8" y="598" width="375" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrV-AX-wxO">
+                                        <rect key="frame" x="8" y="8" width="359" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lrV-AX-wxO" secondAttribute="bottom" constant="8" id="0S3-zc-U9N"/>
+                                    <constraint firstItem="lrV-AX-wxO" firstAttribute="top" secondItem="22h-3e-Tyt" secondAttribute="top" constant="8" id="Gsu-Gx-BAK"/>
+                                    <constraint firstItem="lrV-AX-wxO" firstAttribute="leading" secondItem="22h-3e-Tyt" secondAttribute="leading" constant="8" id="nZ3-vg-xa9"/>
+                                    <constraint firstAttribute="trailing" secondItem="lrV-AX-wxO" secondAttribute="trailing" constant="8" id="yNO-ja-gxo"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xFT-bl-Jh0" firstAttribute="bottom" secondItem="Ng1-jt-HOu" secondAttribute="bottom" id="D80-eE-t7m"/>
-                            <constraint firstItem="Ng1-jt-HOu" firstAttribute="top" secondItem="xFT-bl-Jh0" secondAttribute="top" id="Sr4-ti-7Zr"/>
-                            <constraint firstItem="xFT-bl-Jh0" firstAttribute="trailing" secondItem="Ng1-jt-HOu" secondAttribute="trailing" id="U6O-Dz-5Ym"/>
-                            <constraint firstItem="Ng1-jt-HOu" firstAttribute="leading" secondItem="xFT-bl-Jh0" secondAttribute="leading" id="foa-V6-PYr"/>
+                            <constraint firstItem="22h-3e-Tyt" firstAttribute="trailing" secondItem="xFT-bl-Jh0" secondAttribute="trailing" constant="8" id="B47-gc-lLb"/>
+                            <constraint firstItem="xFT-bl-Jh0" firstAttribute="bottom" secondItem="Ng1-jt-HOu" secondAttribute="bottom" constant="8" id="D80-eE-t7m"/>
+                            <constraint firstItem="22h-3e-Tyt" firstAttribute="bottom" secondItem="xFT-bl-Jh0" secondAttribute="bottom" constant="8" id="JSX-Y4-c3r"/>
+                            <constraint firstItem="Ng1-jt-HOu" firstAttribute="top" secondItem="xFT-bl-Jh0" secondAttribute="top" constant="8" id="Sr4-ti-7Zr"/>
+                            <constraint firstItem="xFT-bl-Jh0" firstAttribute="trailing" secondItem="Ng1-jt-HOu" secondAttribute="trailing" constant="8" id="U6O-Dz-5Ym"/>
+                            <constraint firstItem="Ng1-jt-HOu" firstAttribute="leading" secondItem="xFT-bl-Jh0" secondAttribute="leading" constant="8" id="foa-V6-PYr"/>
+                            <constraint firstItem="22h-3e-Tyt" firstAttribute="leading" secondItem="xFT-bl-Jh0" secondAttribute="leading" constant="8" id="qyX-1h-2rC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xFT-bl-Jh0"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Photo" id="ZWG-sI-MrK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="edV-Is-E0E">
+                            <connections>
+                                <action selector="deletePhoto" destination="FgH-kb-1J7" id="xyC-MJ-J7q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="captionView" destination="22h-3e-Tyt" id="TRa-id-4yo"/>
                         <outlet property="imageView" destination="Ng1-jt-HOu" id="KfT-Zs-86g"/>
+                        <outlet property="label" destination="lrV-AX-wxO" id="peJ-es-gab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESX-cM-P7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-479" y="-740"/>
         </scene>
-        <!--Photo Collection View Controller-->
+        <!--Photos-->
         <scene sceneID="Y0L-xo-eSC">
             <objects>
                 <collectionViewController id="72i-bx-K0o" customClass="PhotoCollectionViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +188,7 @@
                             <outlet property="delegate" destination="72i-bx-K0o" id="7dq-aN-Lze"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="6Ck-8P-BeF">
+                    <navigationItem key="navigationItem" title="Photos" id="6Ck-8P-BeF">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="O9e-wC-bMG">
                             <connections>
                                 <action selector="handleCameraButtonTapped:" destination="72i-bx-K0o" id="hTN-dR-DTb"/>
