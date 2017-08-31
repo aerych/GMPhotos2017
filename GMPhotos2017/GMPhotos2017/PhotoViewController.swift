@@ -5,6 +5,7 @@ class PhotoViewController: UIViewController
     @IBOutlet var captionView: UIView!
     @IBOutlet var label: UILabel!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var mapButton: UIButton!
 
     var photo: Photo?
 
@@ -26,8 +27,18 @@ class PhotoViewController: UIViewController
 
         let caption = photo.caption ?? ""
         captionView.isHidden = !(caption.characters.count > 0)
+
+        if photo.coordinate.latitude != 0 && photo.longitude != 0 {
+            mapButton.isHidden = false
+        }
     }
 
+    @IBAction func handleMapButton(_ button: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        controller.photo = photo
+        navigationController?.pushViewController(controller, animated: true)
+    }
 
     @IBAction func deletePhoto() {
         if let photo = self.photo {
