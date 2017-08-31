@@ -12,4 +12,3 @@ class PhotoViewController: UIViewController
         imageView.image = UIImage(named: "whistler.jpg")
     }
 }
-

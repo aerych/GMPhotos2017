@@ -58,5 +58,3 @@ class PhotoCollectionViewController : UICollectionViewController
     }
 
 }
-
-
