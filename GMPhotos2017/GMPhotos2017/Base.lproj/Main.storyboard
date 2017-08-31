@@ -26,10 +26,66 @@
             </objects>
             <point key="canvasLocation" x="-1310" y="30"/>
         </scene>
+        <!--Save Photo-->
+        <scene sceneID="K0X-a4-meE">
+            <objects>
+                <viewController storyboardIdentifier="SavePhotoViewController" id="ZwT-BZ-2ex" customClass="SavePhotoViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pXX-xA-yq4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7N-Mr-pHc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3y-j3-opW">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="saveImage" destination="ZwT-BZ-2ex" eventType="primaryActionTriggered" id="km8-mC-o2j"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c3y-j3-opW" firstAttribute="leading" secondItem="xqc-qT-I2t" secondAttribute="leading" constant="16" id="1Ny-gt-HDt"/>
+                            <constraint firstItem="xqc-qT-I2t" firstAttribute="trailing" secondItem="c3y-j3-opW" secondAttribute="trailing" constant="16" id="7yA-p4-iOY"/>
+                            <constraint firstItem="B7N-Mr-pHc" firstAttribute="leading" secondItem="xqc-qT-I2t" secondAttribute="leading" id="Wj0-Dk-f35"/>
+                            <constraint firstItem="xqc-qT-I2t" firstAttribute="trailing" secondItem="B7N-Mr-pHc" secondAttribute="trailing" id="t9R-VZ-ImP"/>
+                            <constraint firstItem="B7N-Mr-pHc" firstAttribute="top" secondItem="xqc-qT-I2t" secondAttribute="top" id="xen-5t-4c1"/>
+                            <constraint firstItem="c3y-j3-opW" firstAttribute="top" secondItem="xqc-qT-I2t" secondAttribute="top" constant="100" id="yah-Zp-9if"/>
+                            <constraint firstItem="xqc-qT-I2t" firstAttribute="bottom" secondItem="B7N-Mr-pHc" secondAttribute="bottom" id="z5P-r6-quO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xqc-qT-I2t"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Save Photo" id="AL6-Lm-jIR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Emp-9f-8HM">
+                            <connections>
+                                <action selector="dismiss" destination="ZwT-BZ-2ex" id="eKU-oS-uUp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Yyl-hj-eXq">
+                            <connections>
+                                <action selector="saveImage" destination="ZwT-BZ-2ex" id="On3-Uy-RQC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="B7N-Mr-pHc" id="adB-2P-g3h"/>
+                        <outlet property="textField" destination="c3y-j3-opW" id="AP4-lz-caz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdu-GM-i6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1311" y="-739"/>
+        </scene>
         <!--Photo View Controller-->
         <scene sceneID="MWX-Os-rt4">
             <objects>
-                <viewController id="FgH-kb-1J7" customClass="PhotoViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoViewController" id="FgH-kb-1J7" customClass="PhotoViewController" customModule="GMPhotos2017" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="43W-MN-dU0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESX-cM-P7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-578.39999999999998" y="-633.73313343328346"/>
+            <point key="canvasLocation" x="-479" y="-740"/>
         </scene>
         <!--Photo Collection View Controller-->
         <scene sceneID="Y0L-xo-eSC">
@@ -64,7 +120,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wix-7c-4Nz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.52941176470588236" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ejV-ko-YMG">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -101,11 +157,17 @@
                             <outlet property="delegate" destination="72i-bx-K0o" id="7dq-aN-Lze"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="6Ck-8P-BeF"/>
+                    <navigationItem key="navigationItem" id="6Ck-8P-BeF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="O9e-wC-bMG">
+                            <connections>
+                                <action selector="handleCameraButtonTapped:" destination="72i-bx-K0o" id="hTN-dR-DTb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHE-0H-yw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-578" y="29"/>
+            <point key="canvasLocation" x="-478" y="29"/>
         </scene>
     </scenes>
 </document>
