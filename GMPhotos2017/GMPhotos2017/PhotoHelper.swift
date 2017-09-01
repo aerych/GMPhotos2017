@@ -21,17 +21,17 @@ class PhotoHelper
 
         if imageOrientation == UIImageOrientation.down || imageOrientation == UIImageOrientation.downMirrored {
             transform = transform.translatedBy(x: size.width, y: size.height)
-            transform = transform.rotated(by: .pi)
+            transform = transform.rotated(by: CGFloat(Double.pi))
         }
 
         if imageOrientation == UIImageOrientation.left || imageOrientation == UIImageOrientation.leftMirrored {
             transform = transform.translatedBy(x: size.width, y: 0)
-            transform = transform.rotated(by: .pi)
+            transform = transform.rotated(by: CGFloat(Double.pi / 2.0))
         }
 
         if imageOrientation == UIImageOrientation.right || imageOrientation == UIImageOrientation.rightMirrored {
             transform = transform.translatedBy(x: 0, y: size.height)
-            transform = transform.rotated(by: .pi)
+            transform = transform.rotated(by: CGFloat(-Double.pi / 2.0))
         }
 
         if imageOrientation == UIImageOrientation.upMirrored || imageOrientation == UIImageOrientation.downMirrored {
