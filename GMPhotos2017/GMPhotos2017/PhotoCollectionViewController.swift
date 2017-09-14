@@ -55,7 +55,7 @@ class PhotoCollectionViewController : UICollectionViewController
     }
 
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var availableWidth = collectionView.frame.width
         availableWidth -= 20 // horizontal insets.
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
